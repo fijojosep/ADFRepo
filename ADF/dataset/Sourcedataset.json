@@ -1,0 +1,20 @@
+{
+	"name": "Sourcedataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageSource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp.txt",
+				"folderPath": "input",
+				"container": "adfblob"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

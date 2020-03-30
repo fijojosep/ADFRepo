@@ -1,0 +1,25 @@
+{
+	"name": "blobcopytrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Copyblob",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2020-03-28T02:16:00Z",
+				"endTime": "2020-03-29T02:13:31.849Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
