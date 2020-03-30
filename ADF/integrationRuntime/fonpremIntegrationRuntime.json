@@ -1,0 +1,6 @@
+{
+	"name": "fonpremIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
