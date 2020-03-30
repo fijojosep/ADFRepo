@@ -1,0 +1,28 @@
+{
+	"name": "Transformation",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "FromXMLSheet"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "afterConversionStoringinBlob",
+						"type": "DatasetReference"
+					},
+					"name": "sink"
+				}
+			],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpurgeFiles: true) ~> FromXMLSheet\nFromXMLSheet sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink"
+		}
+	}
+}
